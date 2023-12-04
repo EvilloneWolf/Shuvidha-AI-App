@@ -53,14 +53,13 @@
     <script>
         function paraphraseText() {
             const inputText = document.getElementById('inputText').value;
-            // For demonstration purposes, using a dummy API endpoint.
+            // For demo only, using a dummy API endpoint.
             const apiUrl = 'https://jsonplaceholder.typicode.com/posts/2';
 
-            // Replace the dummy API endpoint with the actual Paraphrasing API endpoint.
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
-                    const paraphrasedText = data.title; // Extracting relevant information from the dummy response.
+                    const paraphrasedText = data.title; 
                     document.getElementById('outputText').value = paraphrasedText;
                 })
                 .catch(error => {

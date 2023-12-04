@@ -53,14 +53,13 @@
     <script>
         function summarizeText() {
             const inputText = document.getElementById('inputText').value;
-            // For demonstration purposes, using a dummy API endpoint.
+            // For demo only, using a dummy API endpoint.
             const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
-            // Replace the dummy API endpoint with the actual Summarization API endpoint.
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
-                    const summary = data.title; // Extracting relevant information from the dummy response.
+                    const summary = data.title;
                     document.getElementById('outputText').value = summary;
                 })
                 .catch(error => {
