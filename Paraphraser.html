@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraphraser Bot</title>
+    <link rel="stylesheet" href="styles/bot.css">
+</head>
+<body>
+
+    <header>
+        <h1>Paraphraser Bot</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <div class="text-container">
+            <h2>Paraphraser Bot</h2>
+            <p>
+                Introducing our Paraphraser Bot, a powerful tool to rephrase sentences and paragraphs while retaining the original meaning. Whether you're a content creator, student, or researcher, our bot can help you generate unique and fresh versions of your text.
+            </p>
+            <p>
+                Enter your text into the input box, click the "Paraphrase" button, and experience how our bot can provide you with alternative wording, making your content more diverse and engaging. It's a valuable resource for avoiding plagiarism and enhancing the originality of your writing.
+            </p>
+        </div>
+        
+        
+        <div class="input-output-container">
+            <div class="input-container">
+                <label for="inputText">Enter Text for Paraphrasing:</label>
+                <textarea id="inputText" rows="10" cols="50"></textarea>
+                <button onclick="paraphraseText()">Paraphrase</button>
+            </div>
+            
+            <div class="output-container">
+                <label for="outputText">Paraphrased Text:</label>
+                <textarea id="outputText" rows="10" cols="50" readonly></textarea>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        &copy; 2023 Bot Website. All rights reserved.
+    </footer>
+
+    <script>
+        function paraphraseText() {
+            const inputText = document.getElementById('inputText').value;
+            // For demonstration purposes, using a dummy API endpoint.
+            const apiUrl = 'https://jsonplaceholder.typicode.com/posts/2';
+
+            // Replace the dummy API endpoint with the actual Paraphrasing API endpoint.
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const paraphrasedText = data.title; // Extracting relevant information from the dummy response.
+                    document.getElementById('outputText').value = paraphrasedText;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+    </script>
+
+</body>
+</html>
