@@ -64,7 +64,13 @@ main {
 
 
 h2 {
+    font-size: xx-large;
     color: #4CAF50;
+}
+.bot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 textarea {
@@ -83,6 +89,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: x-large;
     transition: background-color 0.3s ease;
 }
 
