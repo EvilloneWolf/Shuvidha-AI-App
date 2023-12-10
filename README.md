@@ -5,5 +5,5 @@ Contains:
 Summarizer,
 Paraphraser.
 
-Has basic html,css and javascript.
+Made of basic html,css and javascript.
 
